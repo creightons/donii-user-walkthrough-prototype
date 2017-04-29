@@ -66,22 +66,37 @@ class WalkthruContent extends React.Component {
 
 		const { title, imgUrl, text } = pagestate;
 
+		const nextClass = this.isNextEnabled()
+			? 'walkthru-button-enabled'
+			: 'walkthru-button-disabled';
+
+		const prevClass = this.isPrevEnabled()
+			? 'walkthru-button-enabled'
+			: 'walkthru-button-disabled';
+
 		return (
 			<div className='walkthru-section'>
 				<div className='walkthru-header'>
 					<h4 className='walkthru-title'>{title}</h4>
 				</div>
 				<div className='walkthru-content'>
-					<img src={imgUrl} />
-					<p className='walkthru-description'>{text}</p>
+					<img
+						src={imgUrl}
+						className='walkthru-image'
+					/>
+					<p className='walkthru-description'>
+						{text}
+					</p>
 					<div className='walkthru-nav-buttons'>
 						<button
+							className={['walkthru-button', prevClass].join(' ')}
 							onClick={this.prevPage}
 							disabled={!(this.isPrevEnabled())}
 						>
 							Previous
 						</button>
 						<button
+							className={['walkthru-button', nextClass].join(' ')}
 							onClick={this.nextPage}
 							disabled={!(this.isNextEnabled())}
 						>

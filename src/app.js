@@ -56,6 +56,7 @@ class App extends React.Component {
 					contentLabel='Modal'
 					onRequestClose={this.closeModal}
 					className='modal-container'
+					overlayClassName='modal-overlay'
 				>
 					<WalkthruContent section={this.state.walkthruSection} />
 				</Modal>

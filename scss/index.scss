@@ -7,18 +7,21 @@
 
 // Colors
 $green: #1BA39C;
+$white: #fff;
+$black: #000;
 
 $modal-header-background: #f1f1f1;
 $modal-header-text: rgba(0,0,0,.67);
 $modal-active: rgb(83, 163, 152);
 $modal-passive: rgba(0, 0, 0, 0.670588);
-$modal-overlay: rgba(0,0,0,0);
+$modal-overlay: rgba(33, 33, 33, 0.48);
 
 // Sizes
 $trigger-size: 30px;
 
 $modal-header-font-size: 24px;
 $modal-standard-font-size: 16px;
+$modal-button-font-size: 14px;
 $modal-border-radius: 3px;
 $modal-padding: 55px;
 
@@ -74,22 +77,23 @@ body {
 
 .modal-overlay {
 	background-color: $modal-overlay;
+	//opacity: 0.48;
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0; 
 	bottom: 0;
-
 }
 
 .modal-container {
 	background-color: white;
+	width: 480px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	border-radius: 3px;
-	border: 1px solid black;
+	box-shadow: 0 7px 8px -4px rgba(0,0,0,.2),0 13px 19px 2px rgba(0,0,0,.14),0 5px 4px 4px rgba(0,0,0,.12);
 }
 
 .walkthru-header {
@@ -107,6 +111,11 @@ body {
 	padding: $modal-padding;
 }
 
+.walkthru-image {
+	display: block;
+	margin: 0 auto;
+}
+
 .walkthru-description {
 	padding: 20px 0;
 }
@@ -114,4 +123,40 @@ body {
 .walkthru-nav-buttons {
 	display: flex;
 	justify-content: space-between;
+}
+
+.walkthru-button {
+	font-size: $modal-button-font-size;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+	color: $white;
+	min-height: 36px;
+	min-width: 88px;
+	line-height: 36px;
+	text-align: center;
+	border-radius: $modal-border-radius;
+	box-sizing: border-box;
+	border: 0;
+	padding: 0;
+	marign: 6px 8px;
+	text-transform: uppercase;
+	text-decoration: none;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.walkthru-button-enabled {
+	cursor: pointer;
+	background-color: $modal-active;
+}
+
+.walkthru-button-disabled {
+	background-color: $modal-header-background;
+}
+
+// Disable the outline that appears on the ReactMobile__Content div
+// whenever it is the focus of the DOM
+.ReactModal__Content:focus {
+	outline: none;
 }

@@ -51,28 +51,32 @@ body {
 	width: 100%;
 }
 
-.trigger {
-	width: $trigger-size;
-	height: $trigger-size;
-	background-color: $green;
-	cursor: pointer;
-	border-radius: 50%;
-	position: absolute;
-}
-
 .trigger-donations {
-	top: 250px;
-	left: 495px;
+	top: 375px;
+	left: 490px;
 }
 
 .trigger-total-value {
-	top: 250px;
+	top: 375px;
 	left: 695px;
 }
 
 .trigger-demographics {
-	top: 450px;
-	left: 590px;
+	top: 670px;
+	left: 585px;
+}
+
+.walkthru-trigger {
+	position: absolute;
+	text-transform: lowercase;
+	text-decoration: underline;
+	font-size: 16px;
+	color: $modal-passive;
+	cursor: pointer;
+
+	&:hover {
+		color: $modal-active;
+	}
 }
 
 .modal-overlay {

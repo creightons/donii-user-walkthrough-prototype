@@ -1,0 +1,10 @@
+Instructions
+-------------------------
+
+- Make sure you have Node.JS and NPM installed on your computer (The app was built and tested with Node version 6.9.3 and NPM version 3.10.10)
+
+- Open a terminal window and run the following command: "npm run build"
+
+- When the file is built, open index.html.
+
+- Click on any of the 'help' links to display the Walkthru component

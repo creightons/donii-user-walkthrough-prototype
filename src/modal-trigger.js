@@ -6,13 +6,16 @@ function ModalTrigger({
 	classes,
 }) {
 	const triggerClasses = [ 'trigger', ...classes];
+	const walkthruClasses = [ 'walkthru-trigger', ...classes];
 	const clickHandler = () => openModal(walkthruSection);
 	
 	return (
-		<div
-			className={triggerClasses.join(' ')}
+		<span
+			className={walkthruClasses.join(' ')}
 			onClick= {clickHandler}
-		/>
+		>
+			Help
+		</span>
 	);
 }
 

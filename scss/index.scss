@@ -1,3 +1,6 @@
+@import 'reset.scss';
+
+
 /************************
 * Constants
 ************************/
@@ -5,9 +8,19 @@
 // Colors
 $green: #1BA39C;
 
+$modal-header-background: #f1f1f1;
+$modal-header-text: rgba(0,0,0,.67);
+$modal-active: rgb(83, 163, 152);
+$modal-passive: rgba(0, 0, 0, 0.670588);
+$modal-overlay: rgba(0,0,0,0);
 
 // Sizes
 $trigger-size: 30px;
+
+$modal-header-font-size: 24px;
+$modal-standard-font-size: 16px;
+$modal-border-radius: 3px;
+$modal-padding: 55px;
 
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Lato);
@@ -59,18 +72,46 @@ body {
 	left: 590px;
 }
 
+.modal-overlay {
+	background-color: $modal-overlay;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0; 
+	bottom: 0;
+
+}
+
 .modal-container {
 	background-color: white;
-	padding: 20px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	border: 1px solid $green;
+	border-radius: 3px;
+	border: 1px solid black;
+}
+
+.walkthru-header {
+	background-color: $modal-header-background;
+	padding-left: $modal-padding;
 }
 
 .walkthru-title {
-	text-align: center;
-	font-size: 24px;
-	padding-bottom: 10px;
+	font-size: $modal-header-font-size;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.walkthru-content {
+	padding: $modal-padding;
+}
+
+.walkthru-description {
+	padding: 20px 0;
+}
+
+.walkthru-nav-buttons {
+	display: flex;
+	justify-content: space-between;
 }

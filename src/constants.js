@@ -9,6 +9,21 @@ const walkthruSections = {
 			imgUrl: 'images/donations-1.png',
 			text: 'This is the first step',
 		},
+		{
+			title: 'Donations',
+			imgUrl: 'images/donations-1.png',
+			text: 'This is the second step',
+		},
+		{
+			title: 'Donations',
+			imgUrl: 'images/donations-1.png',
+			text: 'This is the third step',
+		},
+		{
+			title: 'Donations',
+			imgUrl: 'images/donations-1.png',
+			text: 'This is the fourth step',
+		},
 	],
 	[TOTAL_VALUE]: [
 		{

@@ -1,0 +1,76 @@
+/************************
+* Constants
+************************/
+
+// Colors
+$green: #1BA39C;
+
+
+// Sizes
+$trigger-size: 30px;
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+
+/************************
+* Global Sytlings
+************************/
+body {
+	font-family: 'Lato';
+}
+
+/************************
+* Classes
+************************/
+
+.demo-container {
+	margin: 0 auto;	
+	width: 1250px;
+	position: relative;
+}
+
+.donii-dashboard {
+	display: block;
+	width: 100%;
+}
+
+.trigger {
+	width: $trigger-size;
+	height: $trigger-size;
+	background-color: $green;
+	cursor: pointer;
+	border-radius: 50%;
+	position: absolute;
+}
+
+.trigger-donations {
+	top: 250px;
+	left: 495px;
+}
+
+.trigger-total-value {
+	top: 250px;
+	left: 695px;
+}
+
+.trigger-demographics {
+	top: 450px;
+	left: 590px;
+}
+
+.modal-container {
+	background-color: white;
+	padding: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px solid $green;
+}
+
+.walkthru-title {
+	text-align: center;
+	font-size: 24px;
+	padding-bottom: 10px;
+}
